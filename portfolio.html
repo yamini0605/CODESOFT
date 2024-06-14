@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a393469de2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/yamini.jpg" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>A Student</p>
+            <h1>Hi,Iam <span>yamini</span><br>From Vizag</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/referencepic.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+              <p>Iam yamini, Iam 20years old and Iam from vizag.Iam currently purching 4th year B.tech at MVGR college of Engineering of ECE departement.Education is the medium that gives us the skills, techniques, information and knowledge to know, understand and respect the duties we have towards our society, families and nation. In below I described my Education details in breifly.</p> 
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+              </div>
+              <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li><span>2019</span><br>Completed secoundary Education at KKR Gowtham with 9.7CGPA</li>
+                    <li><span>2019-2021</span><br>completed Intermediate at Tirumala junior college with 926marks</li>
+                    <li><span>2021-2025</span><br>Pursuing B.tech at MVGR college of Engineering</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="skills">
+                <ul>
+                    <li><span>web Development</span><br>web app Development</li>
+                    <li><span>programming Languages learned</span><br>C,Python,HTML</li>
+                    <li><span>Other Skills</span><br>Basics of Math lab,IOT</li>
+                </ul>
+              </div>        
+        </div>
+    </div>
+</div>
+<!-----------services-------->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="Services-list">
+            
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Breadth first search Algorithm</h2>
+                <p>Breadth-First search is a method for searching graphs or trees.Traversing the tree entails visiting every node.</p>
+                <a href="#">For detailed explanation click on download below</a>
+                <a href="images/BFS.pdf" download class="btn btn2">DOWNLOAD</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-school"></i>
+                <h2>Student records system by using c</h2>
+                <p>Student record system is a technique by which we maintain the record of different students.</p>
+                <a href="#">For detailed explanation click on download below</a>
+                <a href="images/STUDENT RECORD SYSTEM.pdf" download class="btn btn2">DOWNLOAD</a>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Smart car Parking using IOT</h2>
+                <p>A simple and easy task such as parking is thought as a tedious and time-consuming process due to mismanagement of parking system. </p>
+                <a href="#">For detailed explanation click on download below</a>
+                <a href="images/SMART_PARKING.pdf" download class="btn btn2">DOWNLOAD</a>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!-------------Contact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>yamini.gunuru0605@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>98xxxxxxxx</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/DOC-20240326-WA0006..pdf" download class="btn btn2"> My Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email"name="Email"placeholder="your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Copyright">
+    <p> Copyright © yamini.<i class="fa-solid fa-message"></i></p>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyn6TNpRrh8SYbn0HeAniqZ0QUTqlzSGNBQ5aD2M6MNPspwoAvD3gXL2ezuDCTUzYAJ9Q/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML= ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
+</html>
